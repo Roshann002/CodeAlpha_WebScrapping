@@ -1,0 +1,76 @@
+# 📚 CodeAlpha_WebScraping
+
+> **CodeAlpha Data Analytics Internship — Task 1: Web Scraping**
+
+## 📌 Project Overview
+
+This project scrapes book data from [books.toscrape.com](http://books.toscrape.com) — a publicly available web scraping practice site — using Python. The scraped data is cleaned, analyzed, and visualized through an interactive HTML dashboard.
+
+---
+
+## 🛠️ Tools & Libraries
+
+| Tool | Purpose |
+|---|---|
+| `requests` | HTTP GET requests to fetch web pages |
+| `BeautifulSoup4` | HTML parsing and data extraction |
+| `pandas` | Data cleaning, transformation, CSV export |
+| `time` | Polite crawl delay between requests |
+
+---
+
+## 📁 Project Structure
+
+```
+CodeAlpha_WebScraping/
+├── scraper.py          # Main scraper script
+├── books_data.csv      # Exported dataset (100 books)
+├── dashboard.html      # Interactive analytics dashboard
+└── README.md           # Project documentation
+```
+
+---
+
+## ▶️ How to Run
+
+### 1. Install dependencies
+```bash
+pip install requests beautifulsoup4 pandas
+```
+
+### 2. Run the scraper
+```bash
+python scraper.py
+```
+
+This will scrape 5 pages (~100 books), clean the data, and save to `books_data.csv`.
+
+### 3. View the dashboard
+Open `dashboard.html` in any browser.
+
+---
+
+## 📊 Data Fields Extracted
+
+| Field | Description |
+|---|---|
+| `Title` | Book title |
+| `Price (£)` | Price in British Pounds |
+| `Rating (out of 5)` | Star rating (1–5) |
+| `Availability` | In stock / Out of stock |
+| `In Stock` | Boolean derived from Availability |
+| `URL` | Link to book's detail page |
+
+---
+
+## 📈 Key Insights
+
+- Mystery & Thriller are the most listed categories (16 books each)
+- Biography & History books have the highest average prices (~£40–42)
+- Self-Help books are the most affordable on average (~£21)
+- 76% of books are in stock
+
+---
+
+## 👤 Author
+CodeAlpha Internship Program — Data Analytics Domain
